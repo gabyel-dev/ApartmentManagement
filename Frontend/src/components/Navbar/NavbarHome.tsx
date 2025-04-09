@@ -54,9 +54,11 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="flex items-center">
-            <button className="bg-[var(--base-green)] px-5 py-2 text-white rounded-md cursor-pointer transition-all duration-100 hover:scale-102 text-sm ml-22">
-              Login
-            </button>
+            <Link to={"/login"}>
+              <button className="bg-[var(--base-green)] px-5 py-2 text-white rounded-md cursor-pointer transition-all duration-100 hover:scale-102 text-sm ml-22">
+                Login
+              </button>
+            </Link>
           </div>
         </div>
       </div>

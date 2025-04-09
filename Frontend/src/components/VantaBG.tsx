@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import NET from "vanta/dist/vanta.net.min.js";
 import * as THREE from "three";
-import React from "react";
 import "../components/css/Vanta.css";
 
 export default function VantaBackground() {
@@ -20,7 +19,7 @@ export default function VantaBackground() {
       scaleMobile: 0.5,
       backgroundColor: 0xfefeff,
       color: 0x6b6e70,
-      points: 5,
+      points: 10,
       maxDistance: 20,
       spacing: 20,
     });
