@@ -11,7 +11,7 @@ import {
   faEyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
+import Navbar from "../Navbar/NavbarHome";
 import VantaBackground from "../VantaBG";
 
 //input placeholders
@@ -69,6 +69,7 @@ const Login = () => {
   };
 
   useEffect(() => {
+    document.title = "Apt-Ease - Login";
     const checkUser = async () => {
       const isLoggedIn = await CheckAuth();
       const role = localStorage.getItem("role");
@@ -86,52 +87,56 @@ const Login = () => {
     <>
       <Link
         to="/"
-        className="absolute top-5 left-5 text-sm flex items-center gap-2 lg:hidden text-[var(--gray)] z-10"
+        className="absolute top-5 left-5 text-sm flex items-center gap-2 md:hidden text-[var(--gray)] z-10"
       >
         {back}
         <span>Back</span>
       </Link>
       <VantaBackground />
+      <Navbar />
       <div className="w-full h-[100vh] flex justify-center items-center font text-[var(--gray)] bg-[var(--bg)]">
         <form
           onSubmit={login}
-          className="flex flex-col gap-5 min-w-70 max-w-70 h-fit justify-center items-center z-2 lg:shadow-md p-5 rounded-lg "
+          className="flex flex-col gap-5 max-w-70 h-fit justify-start items-start z-2 p-5 rounded-lg ]"
         >
-          <div className="flex items-center">
-            <img
-              src="https://img.freepik.com/premium-vector/house-apartment-logo-icon-design-illustration_775854-2028.jpg"
-              alt="logo"
-              className="w-15 h-15"
-            />
-            <h1 className="font-black text-2xl">AptEase</h1>
-          </div>
-          <div className="bg-gray-200 rounded-md px-3 py-2 focus:outline-1 focus:outline-gray-400 text-[0.8em] md:text-sm w-full flex items-center gap-3">
-            {user}
-            <input
-              type="text"
-              name="username"
-              value={loginData.username}
-              onChange={handleLoginChange}
-              className="outline-0 border-l-1 border-gray-400 pl-3 w-full"
-            />
+          <div className="flex flex-col items-start pb-6 leading-4">
+            <h1 className="font-black text-3xl">APT-EASE</h1>
+            <p className="text-[var(--dark-green)]">resident login</p>
           </div>
 
-          <div className="bg-gray-200 rounded-md px-3 py-2 focus:outline-1 focus:outline-gray-400 text-[0.8em] md:text-sm w-full flex items-center gap-3 justify-start">
-            {pass}
-            <input
-              type={showPass ? "text" : "password"}
-              name="password"
-              value={loginData.password}
-              onChange={handleLoginChange}
-              className="outline-0 border-l-1 border-gray-400 pl-3 w-full"
-            />
-            <div
-              onClick={() => {
-                showPass === true ? setShowPass(false) : setShowPass(true);
-              }}
-              className="text-[0.8em] text-gray-600"
-            >
-              {showPass ? hide : show}
+          <div className="flex flex-col gap-2">
+            <div className="bg-gray-200 rounded-md px-3 py-2 focus:outline-1 focus:outline-gray-400 text-[0.8em] md:text-sm w-full flex items-center gap-3">
+              {user}
+              <input
+                type="text"
+                name="username"
+                value={loginData.username}
+                onChange={handleLoginChange}
+                placeholder="username"
+                required
+                className="outline-0 border-l-1 border-gray-400 pl-3 w-full"
+              />
+            </div>
+
+            <div className="bg-gray-200 rounded-md px-3 py-2 focus:outline-1 focus:outline-gray-400 text-[0.8em] md:text-sm w-full flex items-center gap-3 justify-start">
+              {pass}
+              <input
+                type={showPass ? "text" : "password"}
+                name="password"
+                value={loginData.password}
+                onChange={handleLoginChange}
+                placeholder="password"
+                required
+                className="outline-0 border-l-1 border-gray-400 pl-3 w-full"
+              />
+              <div
+                onClick={() => {
+                  showPass === true ? setShowPass(false) : setShowPass(true);
+                }}
+                className="text-[0.8em] text-gray-600"
+              >
+                {showPass ? hide : show}
+              </div>
             </div>
           </div>
           <div
@@ -144,21 +149,17 @@ const Login = () => {
             {error}
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`${
-              loading ? "bg-[var(--dark-green)]" : "bg-[var(--base-green)]"
-            } rounded-md px-5 py-2 text-white cursor-pointer mt-5`}
-          >
-            {loading ? "logging in..." : "login"}
-          </button>
-          <Link
-            to={"/"}
-            className="gap-2 items-center text-sm pt-5 hidden lg:block"
-          >
-            back to home
-          </Link>
+          <div className="flex justify-end w-full">
+            <button
+              type="submit"
+              disabled={loading}
+              className={`${
+                loading ? "bg-[var(--dark-green)]" : "bg-[var(--base-green)]"
+              } rounded-md px-5 py-2 text-white cursor-pointer w-full`}
+            >
+              {loading ? "logging in..." : "login"}
+            </button>
+          </div>
         </form>
       </div>
     </>

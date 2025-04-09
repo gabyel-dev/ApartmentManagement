@@ -17,11 +17,12 @@ export default function VantaBackground() {
       minHeight: 200.0,
       minWidth: 200.0,
       scale: 1.0,
-      scaleMobile: 1.0,
+      scaleMobile: 0.5,
       backgroundColor: 0xfefeff,
-      color: 0x86c232,
-      points: 10,
-      maxDistance: 14,
+      color: 0x6b6e70,
+      points: 5,
+      maxDistance: 20,
+      spacing: 20,
     });
 
     return () => {

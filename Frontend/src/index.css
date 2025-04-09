@@ -13,3 +13,24 @@
 .font {
   font-family: "lato", sans-serif;
 }
+
+.links span {
+  position: relative;
+}
+
+.links span::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%; /* Centers the line horizontally */
+  transform: translateX(-50%); /* Shifts the line back to the center */
+  background-color: #86c232;
+  border-radius: 50px;
+  transition: width 0.2s ease;
+}
+
+.links span:hover::before {
+  width: 30px; /* Expands the width on hover */
+}
