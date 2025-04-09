@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center">
             <Link to={"/login"}>
-              <button className="bg-[var(--base-green)] px-5 py-2 text-white rounded-md cursor-pointer transition-all duration-100 hover:scale-102 text-sm ml-22">
+              <button className="bg-[var(--base-green)] px-5 py-2 text-white rounded-md cursor-pointer transition-all duration-100 hover:scale-102 text-sm ml-19">
                 Login
               </button>
             </Link>
@@ -100,9 +100,11 @@ export default function Navbar() {
                 <span>About us</span>
               </Link>
             </div>
-            <button className="bg-[var(--base-green)] px-5 py-2 text-white rounded-md cursor-pointer transition-all duration-100 hover:scale-102 text-sm mt-3">
-              Login
-            </button>
+            <Link to={"/login"} className="w-full">
+              <button className="bg-[var(--base-green)] px-5 py-2 text-white rounded-md cursor-pointer transition-all duration-100 hover:scale-102 text-sm mt-3 w-full">
+                Login
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center items-center w-full pb-5 text-gray-300 text-[0.8em] text-nowrap">
             <p>&copy; Apt-Ease {new Date().getFullYear()}</p>

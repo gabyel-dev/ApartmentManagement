@@ -63,6 +63,10 @@ const Login = () => {
     } catch {
       setError("Invalid credentials");
       setTimeout(() => setError(""), 3000);
+      setLoginData({
+        username: "",
+        password: "",
+      });
     } finally {
       setLoading(false);
     }
@@ -155,7 +159,7 @@ const Login = () => {
               disabled={loading}
               className={`${
                 loading ? "bg-[var(--dark-green)]" : "bg-[var(--base-green)]"
-              } rounded-md px-5 py-2 text-white cursor-pointer w-full`}
+              } rounded-md px-5 py-2 text-white cursor-pointer w-full hover:bg-[var(--dark-green)] transition duration-100`}
             >
               {loading ? "logging in..." : "login"}
             </button>
