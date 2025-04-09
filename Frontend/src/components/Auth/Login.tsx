@@ -84,11 +84,18 @@ const Login = () => {
 
   return (
     <>
+      <Link
+        to="/"
+        className="absolute top-5 left-5 text-sm flex items-center gap-2 lg:hidden text-[var(--gray)] z-10"
+      >
+        {back}
+        <span>Back</span>
+      </Link>
       <VantaBackground />
       <div className="w-full h-[100vh] flex justify-center items-center font text-[var(--gray)] bg-[var(--bg)]">
         <form
           onSubmit={login}
-          className="flex flex-col gap-5 min-w-70 max-w-70 h-fit justify-center items-center z-2 sm:shadow-md p-5 rounded-lg "
+          className="flex flex-col gap-5 min-w-70 max-w-70 h-fit justify-center items-center z-2 lg:shadow-md p-5 rounded-lg "
         >
           <div className="flex items-center">
             <img
@@ -146,7 +153,10 @@ const Login = () => {
           >
             {loading ? "logging in..." : "login"}
           </button>
-          <Link to={"/"} className="flex gap-2 items-center text-sm pt-5">
+          <Link
+            to={"/"}
+            className="gap-2 items-center text-sm pt-5 hidden lg:block"
+          >
             back to home
           </Link>
         </form>
