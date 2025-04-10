@@ -1,0 +1,12 @@
+.leftShadow {
+  position: absolute;
+}
+
+.leftShadow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 1100px 0 1000px -200px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none; /* So it doesn't block clicks */
+}

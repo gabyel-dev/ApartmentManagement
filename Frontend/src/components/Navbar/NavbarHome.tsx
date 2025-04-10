@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const menu = <FontAwesomeIcon icon={faBars} className="text-xl" />;
+const menu = <FontAwesomeIcon icon={faBars} className="text-xl text-white " />;
 const hide = <FontAwesomeIcon icon={faXmark} className="text-white text-xl" />;
 
 const room = <FontAwesomeIcon icon={faBuilding} />;
