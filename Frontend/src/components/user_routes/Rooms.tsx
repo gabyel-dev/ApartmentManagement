@@ -3,6 +3,7 @@ import Navbar from "../Navbar/NavbarHome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import shadow from "../css/Rooms.module.css";
 import RoomList from "./RoomList";
+import { Link } from "react-router-dom";
 
 const right = <FontAwesomeIcon icon={faArrowRight} className="text-sm" />;
 
@@ -24,23 +25,25 @@ export default function Rooms() {
           </div>
 
           {/* Hero Content */}
-          <div className="overflow-hidden px-[5vw] md:px-[10vw] pt-[15vw] md:pt-[16vw] lg:pt-[12vw]">
+          <div className="overflow-hidden px-[5vw] md:px-[10vw] pt-[100px] md:pt-[16vw] lg:pt-[170px]">
             <div className="text-[var(--white)] flex flex-col gap-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 WELCOME TO APT-EASE
               </h1>
-              <p className="w-full sm:w-[80vw] md:w-[70vw] lg:w-[45vw] text-sm sm:text-[0.9em]">
+              <p className="w-full sm:w-[80vw] md:w-[70vw] lg:w-[45vw] text-[0.6em] md:text-[0.9em]">
                 Easily view and manage all rooms in the apartment. Each card
                 displays the room’s image, size, occupancy status, rent details,
                 and more. Quickly check availability, assign tenants, and track
                 rental updates in one place.
               </p>
-              <button
-                className="bg-[var(--base-green)] text-white cursor-pointer mt-4 flex gap-3 items-center justify-between 
+              <Link to={"/about"}>
+                <button
+                  className="bg-[var(--base-green)] text-white cursor-pointer mt-4 flex gap-3 items-center justify-between 
                 px-6 py-3 text-sm rounded-full w-fit"
-              >
-                Get Started! {right}
-              </button>
+                >
+                  Get Started! {right}
+                </button>
+              </Link>
             </div>
           </div>
         </div>

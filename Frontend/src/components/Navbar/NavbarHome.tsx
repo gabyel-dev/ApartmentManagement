@@ -9,7 +9,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const menu = <FontAwesomeIcon icon={faBars} className="text-xl text-white " />;
+const menu = (
+  <FontAwesomeIcon
+    icon={faBars}
+    className="text-xl text-[var(--base-green)] "
+  />
+);
 const hide = <FontAwesomeIcon icon={faXmark} className="text-white text-xl" />;
 
 const room = <FontAwesomeIcon icon={faBuilding} />;
@@ -25,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="md:block hidden font">
+      <div className="md:block hidden font z-100">
         <div className="flex justify-between items-center px-[10vw] py-1 w-full h-[60px] fixed shadow-md text-[var(--gray)] bg-[var(--white)]">
           <div>
             <Link to={"/"}>
@@ -66,17 +71,26 @@ export default function Navbar() {
       <div className="sm:block md:hidden relative font">
         {/* Toggle Button */}
         <div
-          className=" flex right-0 px-5 py-5 z-50 absolute"
+          className=" flex right-0 px-5 py-2 z-50 fixed justify-between w-full"
           onClick={showMenu}
         >
-          {isOpen ? hide : menu}
+          <Link to={"/"}>
+            <div className="flex items-center">
+              <img src="/logo.png" className="w-11 h-11 mr-1 " />
+              <span className="pl-2 pb-2 leading-0 flex flex-col justify-center items-start border-l-1 border-gray-400 text-gray-700">
+                <h1 className="text-lg font-semibold ">AptEase</h1>
+                <p className="text-[0.5em]">apartment management</p>
+              </span>
+            </div>
+          </Link>
+          <div className="flex items-center">{isOpen ? hide : menu}</div>
         </div>
 
         {/* Mobile Menu */}
         <div
           className={`${
             isOpen ? "w-50 px-3" : "w-0"
-          } h-[100vh] absolute top-0 right-0 transition-all duration-300 bg-[var(--bg)] overflow-hidden flex flex-col justify-start items-start z-40`}
+          } h-[100vh] fixed top-0 right-0 transition-all duration-300 bg-[var(--bg)] overflow-hidden flex flex-col justify-start items-start z-40`}
         >
           <div className="flex items-center pt-4">
             <h1 className="text-lg font-semibold text-white">AptEase</h1>

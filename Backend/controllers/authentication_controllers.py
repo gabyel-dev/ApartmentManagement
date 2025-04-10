@@ -67,3 +67,24 @@ def get_id():
         return jsonify({'role': user['role']}), 200
     else:
         return jsonify({'error': 'User not found'}), 404
+    
+    
+@auth.route('/rooms', methods=['GET'])
+def rooms():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    try:
+        cursor.execute('SELECT  id, title, sizeX, sizeY, price, bedrooms, bathrooms, room_id, room_status, img_url FROM rooms')
+        room = cursor.fetchall()
+
+        # Return the list of rooms as JSON response
+        return jsonify(room), 200
+
+        
+        
+    except:
+        return jsonify({'error': 'failed to fetch rooms'})
+    finally:
+        cursor.close()
+        conn.close()
