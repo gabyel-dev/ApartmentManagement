@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       <div className="md:block hidden font z-100">
-        <div className="flex justify-between items-center px-[15vw] py-3 w-full h-[80px] fixed text-[var(--gray)] bg-[var(--white)]">
+        <div className="flex justify-between items-center px-[10vw] py-3 w-full h-[80px] fixed text-[var(--gray)] bg-[var(--white)]">
           <div>
             <Link to={"/"}>
               <div className="flex items-center">
@@ -40,9 +40,11 @@ export default function Navbar() {
                   alt="logo"
                   className="w-15 h-15 mr-1 "
                 />
-                <span className="pl-2 pb-2 leading-1 flex flex-col justify-center items-start border-l-1 border-gray-500 ">
-                  <h1 className="text-3xl font-semibold title">AptEase</h1>
-                  <p className="text-[0.58em]">apartment management</p>
+                <span className="pl-2 pb-2 leading-1 flex flex-col justify-center items-end border-l-1 border-gray-500 ">
+                  <h1 className="text-4xl font-semibold title">AptEase</h1>
+                  <p className="text-[0.6em] text-right tracking-widest">
+                    PROPERTY
+                  </p>
                 </span>
               </div>
             </Link>
@@ -77,9 +79,9 @@ export default function Navbar() {
           <Link to={"/"}>
             <div className="flex items-center">
               <img src="/logo.png" className="w-11 h-11 mr-2" />
-              <span className="pl-2 pb-2 leading-0 flex flex-col justify-center items-start border-l-1 border-gray-400 text-gray-700">
-                <h1 className="text-2xl font-semibold title">AptEase</h1>
-                <p className="text-[0.47em]">apartment management</p>
+              <span className="pl-2 pb-2 leading-0 flex flex-col justify-center items-end border-l-1 border-gray-400 text-gray-700">
+                <h1 className="text-3xl font-semibold title">AptEase</h1>
+                <p className="text-[0.47em] tracking-widest">PROPERTY</p>
               </span>
             </div>
           </Link>
