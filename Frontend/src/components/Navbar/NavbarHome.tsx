@@ -101,7 +101,7 @@ export default function Navbar() {
             {hide}
           </div>
 
-          <div className="flex items-center pt-3 px-3">
+          <div className="flex items-center pt-3">
             <h1 className="text-3xl font-semibold text-white title">AptEase</h1>
           </div>
 
