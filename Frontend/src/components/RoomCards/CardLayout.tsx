@@ -88,13 +88,13 @@ export default function CardLayout() {
   }, [rooms]); // Removed visibleRooms from dependencies to prevent infinite loop
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6 w-full  md:max-w-[100vw] z-[-1] ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6 w-full  md:max-w-[100vw]  ">
       {rooms.map((room, index) => (
         <div
           key={index}
           ref={(el) => (roomRefs.current[index] = el)} // Assign ref to each room
           data-index={index} // Store the index to identify which room is being observed
-          className="relative h-80 md:rounded-xl overflow-hidden shadow-lg group border-b-3 border-t-3 border-[var(--base-green)]"
+          className="relative h-80 z-[-1] overflow-hidden shadow-lg group border-b-3 border-t-3 border-[var(--base-green)]"
         >
           {/* Only render the card if it's in the viewport (visibleRooms includes this index) */}
           {visibleRooms.includes(index) && (

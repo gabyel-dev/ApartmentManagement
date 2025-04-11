@@ -10,8 +10,14 @@ export default function Home() {
     <div>
       <Navbar />
       <div>
+        <div className="flex flex-col items-center pt-23">
+          <h1 className="text-md text-[var(--base-green)]">
+            RENT NOW ON APT-EASE!
+          </h1>
+        </div>
         <CardLayout />
       </div>
+      <div></div>
     </div>
   );
 }

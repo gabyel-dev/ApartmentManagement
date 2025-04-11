@@ -39,12 +39,8 @@ export default function CardLayout() {
         <Navbar />
       </div>
 
-      <h1 className="text-center pt-22 text-[var(--base-green)] ">
-        FIND ROOMS NOW HERE IN APT-EASE!
-      </h1>
-
       {/* Add top padding to avoid overlapping the navbar */}
-      <div className="w-full pt-8">
+      <div className="w-full pt-5 md:pt-7">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation

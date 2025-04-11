@@ -25,7 +25,7 @@ export default function Rooms() {
           </div>
 
           {/* Hero Content */}
-          <div className="overflow-hidden px-[5vw] md:px-[10vw] pt-[100px] md:pt-[16vw] lg:pt-[170px]">
+          <div className="overflow-hidden px-[5vw] md:px-[15vw] pt-[100px] md:pt-[16vw] lg:pt-[170px]">
             <div className="text-[var(--white)] flex flex-col gap-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 WELCOME TO APT-EASE

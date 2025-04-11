@@ -9,9 +9,9 @@ export default function RoomList() {
     <>
       <div className="h-fit pb-20">
         <nav className="h-15 bg-[var(--gray)] flex justify-center items-center text-white border-t-[var(--base-green)] border-t-2">
-          <div className="flex justify-between w-full px-[5vw] md:px-[10vw] font">
-            <div className="flex gap-4 items-center justify-between md:justify-center w-full text-sm md:w-70">
-              <p>Find all rooms available:</p>
+          <div className="flex justify-between w-full px-[5vw] md:px-[15vw] font">
+            <div className="flex gap-4 items-center justify-between md:justify-between w-full text-sm md:w-70">
+              <p>Find rooms available:</p>
               <select
                 defaultValue=""
                 className="border-1 border-[var(--dark-green)] w-20 outline-0 text-white"
@@ -40,7 +40,7 @@ export default function RoomList() {
           </div>
         </nav>
 
-        <div className="py-[10vh] px-0 md:px-[10vw] z-[-1] flex flex-col justify-center items-center">
+        <div className="py-[10vh] px-0 md:px-[15vw] z-[-1] flex flex-col justify-center items-center">
           <h1 className="text-[var(--base-green)] text-xl pb-10">ROOMS</h1>
           <CardLayout />
         </div>
