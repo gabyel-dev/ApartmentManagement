@@ -104,7 +104,7 @@ const Login = () => {
           className="flex flex-col gap-5 max-w-70 h-fit justify-start items-start z-2 p-5 rounded-lg ]"
         >
           <div className="flex flex-col items-start pb-6 leading-4">
-            <h1 className="font-black text-3xl">APT-EASE</h1>
+            <h1 className="font-black text-3xl heading">APT-EASE</h1>
             <p className="text-[var(--dark-green)]">resident login</p>
           </div>
 

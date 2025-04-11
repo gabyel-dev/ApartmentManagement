@@ -27,10 +27,10 @@ export default function Rooms() {
           {/* Hero Content */}
           <div className="overflow-hidden px-[5vw] md:px-[10vw] pt-[100px] md:pt-[16vw] lg:pt-[170px]">
             <div className="text-[var(--white)] flex flex-col gap-3">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold heading">
                 WELCOME TO APT-EASE
               </h1>
-              <p className="w-full sm:w-[80vw] md:w-[70vw] lg:w-[45vw] text-[0.6em] md:text-[0.9em]">
+              <p className="w-full sm:w-[80vw] md:w-[70vw] lg:w-[45vw] text-[0.6em] md:text-[0.9em] font">
                 Easily view and manage all rooms in the apartment. Each card
                 displays the room’s image, size, occupancy status, rent details,
                 and more. Quickly check availability, assign tenants, and track
@@ -38,7 +38,7 @@ export default function Rooms() {
               </p>
               <Link to={"/about"}>
                 <button
-                  className="bg-[var(--base-green)] text-white cursor-pointer mt-4 flex gap-3 items-center justify-between 
+                  className="bg-[var(--base-green)] font text-white cursor-pointer mt-4 flex gap-3 items-center justify-between 
                 px-6 py-3 text-sm rounded-full w-fit"
                 >
                   Get Started! {right}

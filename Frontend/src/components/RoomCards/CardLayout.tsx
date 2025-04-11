@@ -88,7 +88,7 @@ export default function CardLayout() {
   }, [rooms]); // Removed visibleRooms from dependencies to prevent infinite loop
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6 w-full  md:max-w-[100vw]  ">
+    <div className="grid grid-cols-1 font md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6 w-full  md:max-w-[100vw]  ">
       {rooms.map((room, index) => (
         <div
           key={index}
@@ -112,7 +112,7 @@ export default function CardLayout() {
 
               {/* Title + Price + Status */}
               <div className="absolute bottom-0 p-4 text-white w-full">
-                <h2 className="text-xl font-bold">{room.title}</h2>
+                <h2 className="text-xl font-bold heading">{room.title}</h2>
                 <p className="text-lg font-semibold">
                   ₱{room.price.toLocaleString()}
                 </p>
