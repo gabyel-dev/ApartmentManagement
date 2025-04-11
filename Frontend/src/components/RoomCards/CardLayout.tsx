@@ -116,7 +116,15 @@ export default function CardLayout() {
                 <p className="text-lg font-semibold">
                   ₱{room.price.toLocaleString()}
                 </p>
-                <span className="inline-block bg-green-500 text-sm px-2 py-1 mt-1 rounded">
+                <span
+                  className={`inline-block ${
+                    room.room_status === "available"
+                      ? "bg-[var(--base-green)]"
+                      : room.room_status === "occupied"
+                      ? "bg-amber-300"
+                      : "bg-red-500"
+                  } text-sm px-2 py-1 mt-1 rounded`}
+                >
                   {room.room_status}
                 </span>
               </div>
