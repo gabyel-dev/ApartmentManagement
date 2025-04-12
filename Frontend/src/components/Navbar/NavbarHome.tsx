@@ -62,7 +62,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center">
             <Link to={"/login"}>
-              <button className="border-2 border-[var(--base-green)] px-4 py-1 text-[var(--base-green)] cursor-pointer transition-all duration-100 hover:scale-102 text-sm ml-14">
+              <button className="border-2 border-[var(--base-green)] px-4 py-1 text-[var(--base-green)] cursor-pointer transition-all duration-100 hover:scale-102 text-sm lg:ml-14">
                 Resident Login
               </button>
             </Link>

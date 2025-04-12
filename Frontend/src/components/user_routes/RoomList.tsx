@@ -33,7 +33,7 @@ export default function RoomList() {
                 <input
                   type="text"
                   placeholder="search rooms.."
-                  className="outline-0"
+                  className="outline-0 text-sm"
                 />
               </div>
             </div>
