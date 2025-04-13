@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import shadow from "../css/Rooms.module.css";
 import RoomList from "./RoomList";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const right = <FontAwesomeIcon icon={faArrowRight} className="text-sm" />;
 
@@ -12,10 +13,10 @@ export default function Rooms() {
     <>
       <Navbar />
       <div className="overflow-x-hidden">
-        <div className="w-[100vw] h-[50vh] md:h-[60vh] lg:h-[70vh]">
+        <div className="w-[100vw] h-[400px] md:h-[500px] lg:h-[500px]">
           {/* Background Image with Inner Shadow */}
           <div
-            className={`w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden absolute z-[-1] ${shadow.leftShadow}`}
+            className={`w-full h-[400px] md:h-[500px] lg:h-[500px] overflow-hidden absolute z-[-1] ${shadow.leftShadow}`}
           >
             <img
               src="/sample.webp"
@@ -25,7 +26,7 @@ export default function Rooms() {
           </div>
 
           {/* Hero Content */}
-          <div className="overflow-hidden px-[5vw] md:px-[10vw] pt-[100px] md:pt-[16vw] lg:pt-[170px]">
+          <div className="overflow-hidden px-[5vw] md:px-[10vw] pt-[126px] md:pt-[180px] lg:pt-[190px]">
             <div className="text-[var(--white)] flex flex-col gap-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold heading">
                 WELCOME TO APT-EASE
@@ -51,6 +52,7 @@ export default function Rooms() {
         {/* Room Cards */}
         <RoomList />
       </div>
+      <Footer />
     </>
   );
 }

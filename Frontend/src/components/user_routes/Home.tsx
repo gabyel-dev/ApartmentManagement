@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div>
-        <div className="flex flex-col items-center pt-23">
+        <div className="flex flex-col items-center pt-23 md:pt-25">
           <h1 className="text-md text-[var(--base-green)] font">
             RENT NOW ON APT-EASE!
           </h1>

@@ -31,7 +31,19 @@ export default function Navbar() {
   return (
     <>
       <div className="md:block hidden font z-100">
-        <div className="flex justify-between items-center px-[10vw] py-3 w-full h-[80px] fixed text-[var(--gray)] bg-[var(--white)]">
+        <div className="h-6 w-full fixed text-[0.7em] bg-[var(--base-green)] flex justify-end items-center px-[10vw] text-[var(--gray)] py-2">
+          <Link to={"/about"}>
+            <span className="px-2 border-l-1 border-[var(--gray)]">
+              About us
+            </span>
+          </Link>
+          <Link to={"/contact"}>
+            <span className="pl-2 border-l-1 border-[var(--gray)]">
+              Contact
+            </span>
+          </Link>
+        </div>
+        <div className="flex justify-between items-center px-[10vw] py-3 w-full h-[80px] fixed top-6 text-[var(--gray)] bg-[var(--white)]">
           <div>
             <Link to={"/"}>
               <div className="flex items-center">
@@ -49,20 +61,18 @@ export default function Navbar() {
               </div>
             </Link>
           </div>
-          <div className="flex gap-6 text-sm links">
-            <Link to={"/"}>
-              <span>Home</span>
-            </Link>
-            <Link to={"/rooms"}>
-              <span>Rooms</span>
-            </Link>
-            <Link to={"/about"}>
-              <span>About us</span>
-            </Link>
-          </div>
-          <div className="flex items-center">
-            <Link to={"/login"}>
-              <button className="border-2 border-[var(--base-green)] px-4 py-1 text-[var(--base-green)] cursor-pointer transition-all duration-100 hover:scale-102 text-sm lg:ml-14">
+
+          <div className="flex items-center gap-6">
+            <div className="flex text-sm links gap-6">
+              <Link to={"/"}>
+                <span>Home</span>
+              </Link>
+              <Link to={"/rooms"}>
+                <span>Rooms</span>
+              </Link>
+            </div>
+            <Link to={"/login"} className="login-btn">
+              <button className="border-2 border-[var(--base-green)] px-4 py-1 text-[var(--base-green)]  cursor-pointer  text-sm ">
                 Resident Login
               </button>
             </Link>

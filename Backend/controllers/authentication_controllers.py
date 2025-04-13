@@ -5,27 +5,31 @@ from models.database import get_db_connection
 
 auth = Blueprint('auth', __name__)
 
-@auth.route('/register', methods=['GET'])
-def register():
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    username = 'Admin'
-    password = 'Gabgab92210'
-    
-    hashed_password = hash_password(password)
-    
-    try:
-        cursor.execute('INSERT INTO appartment_accounts (username, password) VALUES (%s, %s)', (username, hashed_password))
-        row = conn.commit()
-        
-        if row > 0:
-            return jsonify({'message': 'data inserted successfully'})
-        
-    except:
-        return jsonify({'error': 'failed to insert data'})
-    finally:
-        cursor.close()
-        conn.close()
+########################################
+# CREATE ADMIN ACCOUNTS remove (#)     #
+########################################
+
+#@auth.route('/register', methods=['GET'])
+#def register():
+#    conn = get_db_connection()
+#    cursor = conn.cursor()
+#    username = 'Admin'
+#    password = 'Gabgab92210'
+#    
+#    hashed_password = hash_password(password)
+#    
+#    try:
+#        cursor.execute('INSERT INTO appartment_accounts (username, password) VALUES (%s, %s)', (username, hashed_password))
+#        row = conn.commit()
+#        
+#        if row > 0:
+#            return jsonify({'message': 'data inserted successfully'})
+#        
+#    except:
+#        return jsonify({'error': 'failed to insert data'})
+#    finally:
+#       cursor.close()
+#        conn.close()
 
 @auth.route('/login', methods=['POST'])
 def login():
