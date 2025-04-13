@@ -5,10 +5,14 @@ import shadow from "../css/Rooms.module.css";
 import RoomList from "./RoomList";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import { useEffect } from "react";
 
 const right = <FontAwesomeIcon icon={faArrowRight} className="text-sm" />;
 
 export default function Rooms() {
+  useEffect(() => {
+    document.title = "Rooms - AptEase";
+  });
   return (
     <>
       <Navbar />

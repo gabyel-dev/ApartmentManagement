@@ -7,7 +7,7 @@ import {
   faCircleInfo,
   faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const menu = (
   <FontAwesomeIcon
@@ -23,6 +23,17 @@ const home = <FontAwesomeIcon icon={faHouse} />;
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  const scroll = () => {
+    setIsScrolling(window.scrollY > 10 ? true : false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+
+    return () => window.addEventListener("scroll", scroll);
+  }, []);
 
   const showMenu = () => {
     setIsOpen(!isOpen);
@@ -30,8 +41,8 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="md:block hidden font z-100">
-        <div className="h-6 w-full fixed text-[0.7em] bg-[var(--base-green)] flex justify-end items-center px-[10vw] text-[var(--gray)] py-2">
+      <div className="md:block hidden font z-40 ">
+        <div className="h-6 w-full text-[0.7em] bg-[var(--base-green)] flex justify-end items-center px-[10vw] text-[var(--gray)] py-2 z-40 ">
           <Link to={"/about"}>
             <span className="px-2 border-l-1 border-[var(--gray)]">
               About us
@@ -43,7 +54,13 @@ export default function Navbar() {
             </span>
           </Link>
         </div>
-        <div className="flex justify-between items-center px-[10vw] py-3 w-full h-[80px] fixed top-6 text-[var(--gray)] bg-[var(--white)]">
+        <div
+          className={`flex justify-between items-center px-[10vw] py-3 w-full h-[80px]  ${
+            isScrolling
+              ? "top-0 fixed"
+              : "top-6 transition-all duration-300 absolute"
+          } text-[var(--gray)] bg-[var(--white)]`}
+        >
           <div>
             <Link to={"/"}>
               <div className="flex items-center">

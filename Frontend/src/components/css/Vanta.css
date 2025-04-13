@@ -1,9 +1,11 @@
 .bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   z-index: 0; /* To ensure it stays behind other content */
   opacity: 1;
+  top: 23px;
+  overflow: hidden;
 }

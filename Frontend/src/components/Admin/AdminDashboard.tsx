@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/NavbarHome";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -11,9 +12,12 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div>
-      <button onClick={logout}>ALIS</button>
-    </div>
+    <>
+      <Navbar />
+      <div>
+        <button onClick={logout}>ALIS</button>
+      </div>
+    </>
   );
 };
 
