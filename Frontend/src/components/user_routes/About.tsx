@@ -96,11 +96,11 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="w-full flex flex-col justify-center items-center h-fit text-[var(--gray)] gap-2 py-8">
+          <div className="w-full flex flex-col justify-center items-center h-fit text-[var(--gray)] gap-5 py-15 px-[5vw] md:px-0">
             <h1 className="heading text-xl text-[var(--base-green)]">
               ABOUT APTEASE
             </h1>
-            <p className="font text-center text-[var(--light-gray)]">
+            <p className="font text-justify text-[var(--light-gray)]">
               <strong>AptEase</strong> is a modern apartment management system
               designed to simplify life for both landlords and tenants. Backed
               by over 35 years of industry experience, AptEase offers a seamless

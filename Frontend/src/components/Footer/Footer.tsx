@@ -11,7 +11,7 @@ const linkedIn = <FontAwesomeIcon icon={faLinkedin} />;
 
 export default function Footer() {
   return (
-    <div className="md:h-[300px] bg-[var(--dark-green)] md:px-[3vw] md:py-12">
+    <div className="md:h-[360px] bg-[var(--dark-green)] md:px-[3vw] md:pt-16">
       <div className="flex flex-col">
         <div className="flex gap-4 items-center">
           <img src="/logo.png" alt="logo" className="w-25 h-25" />
@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         {/* socials */}
-        <div className="text-4xl text-white flex gap-3 pt-4 pl-2">
+        <div className="text-3xl text-white flex gap-3 pt-4 pl-2">
           <a href="#">{linkedIn}</a>
           <a href="#">{fb}</a>
           <a href="#">{ig}</a>
