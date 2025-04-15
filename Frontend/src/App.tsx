@@ -6,6 +6,7 @@ import AdminDashboard from "./components/Admin/AdminDashboard";
 import Protected from "./components/Auth/Protected";
 import Rooms from "./components/user_routes/Rooms";
 import About from "./components/user_routes/About";
+import Contact from "./components/user_routes/Contact";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* Protected Routes */}
           <Route

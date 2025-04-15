@@ -1,0 +1,44 @@
+/*
+.home::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 0;
+  height: 0;
+  transform: translateX(-70%) translateY(120%);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.home:hover::after {
+  content: "home";
+  color: white;
+  text-align: center;
+  background-color: #383838;
+  opacity: 1;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.rooms::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 0;
+  height: 0;
+  transform: translateX(-70%) translateY(120%);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.rooms:hover::after {
+  content: "login";
+  background-color: #383838;
+  opacity: 1;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+*/

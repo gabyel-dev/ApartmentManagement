@@ -12,25 +12,25 @@ import Footer from "../Footer/Footer";
 const first = (
   <FontAwesomeIcon
     icon={faShieldHalved}
-    className="text-[var(--base-green)] text-4xl"
+    className="text-[var(--base-green)] text-4xl hover:scale-110 transition-all duration-300"
   />
 );
 const second = (
   <FontAwesomeIcon
     icon={faDolly}
-    className="text-[var(--base-green)] text-4xl"
+    className="text-[var(--base-green)] text-4xl hover:scale-110 transition-all duration-300"
   />
 );
 const third = (
   <FontAwesomeIcon
     icon={faIntercom}
-    className="text-[var(--base-green)] text-4xl"
+    className="text-[var(--base-green)] text-4xl hover:scale-110 transition-all duration-300"
   />
 );
 const fourth = (
   <FontAwesomeIcon
     icon={faWarehouse}
-    className="text-[var(--base-green)] text-4xl"
+    className="text-[var(--base-green)] text-4xl hover:scale-110 transition-all duration-300"
   />
 );
 

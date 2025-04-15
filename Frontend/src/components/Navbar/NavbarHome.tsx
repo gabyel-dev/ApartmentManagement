@@ -8,6 +8,7 @@ import {
   faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import hovers from "../css/Navbar.module.css";
 
 const menu = (
   <FontAwesomeIcon
@@ -44,12 +45,12 @@ export default function Navbar() {
       <div className="md:block hidden font z-40 ">
         <div className="h-6 w-full text-[0.7em] bg-[var(--base-green)] flex justify-end items-center px-[10vw] text-[var(--gray)] py-2 z-40 ">
           <Link to={"/about"}>
-            <span className="px-2 border-l-1 border-[var(--gray)]">
+            <span className="px-2 border-l-1 border-[var(--gray)] hover:text-white">
               About us
             </span>
           </Link>
           <Link to={"/contact"}>
-            <span className="pl-2 border-l-1 border-[var(--gray)]">
+            <span className="pl-2 border-l-1 border-[var(--gray)] hover:text-white">
               Contact
             </span>
           </Link>
@@ -57,7 +58,7 @@ export default function Navbar() {
         <div
           className={`flex justify-between items-center px-[10vw] py-3 w-full h-[80px]  ${
             isScrolling
-              ? "top-0 fixed"
+              ? "top-0 fixed shadow-lg/5"
               : "top-6 transition-all duration-300 absolute"
           } text-[var(--gray)] bg-[var(--white)]`}
         >
@@ -81,10 +82,10 @@ export default function Navbar() {
 
           <div className="flex items-center gap-6">
             <div className="flex text-sm links gap-6">
-              <Link to={"/"}>
+              <Link to={"/"} className={`${hovers.home}`}>
                 <span>Home</span>
               </Link>
-              <Link to={"/rooms"}>
+              <Link to={"/rooms"} className={`${hovers.rooms}`}>
                 <span>Rooms</span>
               </Link>
             </div>
@@ -112,6 +113,7 @@ export default function Navbar() {
               </span>
             </div>
           </Link>
+
           {/* Only show hamburger when menu is closed */}
           {!isOpen && <div className="flex items-center z-50">{menu}</div>}
         </div>

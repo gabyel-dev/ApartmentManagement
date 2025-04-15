@@ -145,7 +145,7 @@ const Login = () => {
               </div>
             </div>
             <div
-              className={`fixed top-8 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out ${
+              className={`fixed top-24 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-in-out ${
                 error
                   ? "translate-y-0 opacity-100"
                   : "-translate-y-10 opacity-0 pointer-events-none"
