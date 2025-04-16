@@ -43,8 +43,8 @@ export default function Contact() {
     <>
       <Navbar />
       <div className="w-full h-fit  pt-30 flex justify-center flex-col items-center font">
-        <div className="pb-20 sm:flex sm:flex-col md:flex md:flex-row w-full justify-center">
-          <div className="flex flex-col gap-5 sm:w-full md:w-120  shadow-md rounded-lg p-4 font">
+        <div className="pb-20 sm:flex sm:flex-col md:flex md:flex-row w-full justify-between md:px-[10vw]">
+          <div className="flex flex-col gap-5 sm:w-full md:w-[50vw]  shadow-md rounded-lg p-4 font ">
             <h1 className="text-center heading font-semibold text-[var(--base-green)]">
               CONTACT US
             </h1>
@@ -75,7 +75,7 @@ export default function Contact() {
               Submit
             </button>
           </div>
-          <div className="w-full pt-9 md:pt-0 md:w-[40vw] text-[var(--gray)] flex flex-col gap-4 px-6 items-center justify-center md:items-start">
+          <div className="w-full pt-9 md:pt-0 md:w-[40vw] md:text-[0.6em] text-[var(--gray)] flex flex-col gap-3 px-6 md:px-0 md:pl-3 items-center justify-center md:items-start">
             <p className="text-sm text-center md:text-start">
               At aptEase, we are committed to giving you the best experience.
               For any questions, suggestions, comments, or issues, kindly
